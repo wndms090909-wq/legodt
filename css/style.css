@@ -15,6 +15,7 @@ body {
     font-family: "Outfit", "Suit", sans-serif;
     font-size: 1.6rem;
     color: var(--font-base-color);
+    background: #f3f3f3;
 }
 
 .wide-inner {
@@ -36,8 +37,8 @@ header {
     height: 7rem;
     position: fixed;
     width: 100%;
-    z-index: 1000;
-    /* 나중에 앱솔루트 준에가 위로 오기 때문에 가장위로 */
+    z-index: 10000;
+    /* 나중에 앱솔루트 준 얘가 위로 오기 때문에 가장위로 */
 }
 
 .logo {
@@ -67,7 +68,7 @@ header {
     gap: 2.4rem;
 
     >li {
-        background-color: green;
+        /* background-color: green; */
         position: relative;
 
         >a {
@@ -111,7 +112,7 @@ header {
 /* 서브메뉴의 배경이 100%인경우 header fixed일때 사용할것 */
 .depth1 {
     /* display: none; */
-    background-color: skyblue;
+    /* background-color: skyblue; */
     position: absolute;
     /* border: 1px solid black; */
     left: 50%;
@@ -140,7 +141,7 @@ header {
 
 .header-right>ul>li {
     position: relative;
-    background-color: skyblue;
+    /* background-color: skyblue; */
     /* 메뉴의 서브메뉴에 호버 할 때 계속 뜨게 하려면 패딩이든 줘서 영역을 늘려줘야한다 */
     line-height: 70px;
     /* 라인을 줘서 영역이 넓어져서 서브메뉴가 올라감 -> top 위치값으로 내림*/
@@ -352,6 +353,7 @@ header {
 }
 
 .make-your-wrap .make-your {
+    position: relative;
     background: linear-gradient(to right, #68dbe8 0%, #e3f5ab 35%, #e3f5ab 65%, #68dbe8 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }

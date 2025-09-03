@@ -8,11 +8,47 @@
 @media screen and (max-width:980px) {
 
     /* 1.제거하기 */
-    .main-menu,
+    /* .main-menu, */
     .header-right,
     address,
     .company-info {
         display: none;
+    }
+
+    nav {
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: -110vw;
+        z-index: 10000;
+    }
+
+    .main-menu {
+        display: block;
+        width: 70%;
+        max-width: 640px;
+        min-width: 320px;
+        height: 100%;
+        text-indent: 20px;
+        background: pink;
+    }
+    .main-menu::before{
+        display: none;
+    }
+    .main-menu:hover .depth1 {
+        height: auto;
+    }
+    .depth1 {
+        position: static;
+        height: auto;
+        transform: translateX(0);
+        text-indent: 40px;
+        display: none;
+    }
+    .main-menu>li:hover .depth1{
+        display: block;
     }
 
     /* 2.보이기 */
@@ -20,6 +56,7 @@
     .header-left {
         top: 50%;
         transform: translateY(-50%);
+        line-height: 56px;
     }
 
     /* main-slider */
@@ -41,7 +78,7 @@
         font-weight: 700;
     }
 
-    main{
+    main {
         overflow: hidden;
     }
 
@@ -112,12 +149,14 @@
 
     /* footer */
     footer {}
+
     .footer-menu {
-        width:100%;
+        width: 100%;
         justify-content: space-between;
         line-height: 2;
     }
-    .footer-menu>li:nth-child(2n){
+
+    .footer-menu>li:nth-child(2n) {
         text-align: right;
     }
 }
@@ -125,80 +164,101 @@
 /* mobile */
 @media screen and (max-width:768px) {
     .logo img {
-        width:120px;
+        width: 120px;
     }
+
     .ham-btn img {
         width: 24px;
     }
-    .main-slider{
+
+    .main-slider {
         /* vw: viewport width
         vh: viewport height
         현재 보고있는 기기의 넓이가 기준 */
         height: 130vw;
     }
-    .main-slider>div{
+
+    .main-slider>div {
         height: 100%;
     }
-    .main-slider>div .img-box img{
+
+    .main-slider>div .img-box img {
         height: 100%;
         object-fit: cover;
     }
-    .main-slider>div .text-box{
-        width:100%;
-    }
-    .main-slider>div .text-box .shop-now-btn>a{
-        padding: 1rem 3rem;
-        font-size:1.6rem;
-    }
-    .main-slider-wrap .slider-pager{
-        left:0;
-        width:100%;
-        bottom:20px;
-        gap:10px;
-    } 
 
-    .container{
-        margin-top: 50px;
+    .main-slider>div .text-box {
+        width: 100%;
     }
-    .container section{
-        margin-bottom:50px;
-    }
-    .container .section-title{
-        font-size:4rem;
-        margin-bottom: 4rem;
-    }
-    /* make your */
-    .make-your-wrap .make-your .text-box{
-        width:100%;
-    }
-    .make-your .text-box .lets-btn{
+
+    .main-slider>div .text-box .shop-now-btn>a {
         padding: 1rem 3rem;
         font-size: 1.6rem;
     }
-    /* loved by */
-    /* new in */
-    .new-in-wrap .outline-title{
-        font-size: 6rem;
-    }
-    .new-in-wrap .new-item-img{
-        width: 80%;
-    }
-    .new-in-wrap .shop-now-btn>a,
-    .arrow-btn>li>a{
-        padding:1rem 3rem;
+
+    .main-slider-wrap .slider-pager {
+        left: 0;
+        width: 100%;
+        bottom: 20px;
+        gap: 10px;
     }
 
-    .tab-menu-list{
+    .container {
+        margin-top: 50px;
+    }
+
+    .container section {
+        margin-bottom: 50px;
+    }
+
+    .container .section-title {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    /* make your */
+    .make-your-wrap .make-your .text-box {
+        width: 100%;
+    }
+
+    .make-your .text-box .slider-title {
+        font-size: 4rem;
+    }
+
+    .make-your .text-box .lets-btn {
+        padding: 1rem 3rem;
+        font-size: 1.6rem;
+    }
+
+    /* loved by */
+    /* new in */
+    .new-in-wrap .outline-title {
+        font-size: 6rem;
+    }
+
+    .new-in-wrap .new-item-img {
+        width: 80%;
+    }
+
+    .new-in-wrap .shop-now-btn>a,
+    .arrow-btn>li>a {
+        padding: 1rem 3rem;
+    }
+
+    .tab-menu-list {
         font-size: 1.75rem;
-        gap:2rem;
+        gap: 2rem;
     }
-    .catalogue-list>div .thumb-img{
-        gap:0;
+
+    .catalogue-list>div .thumb-img {
+        gap: 0;
     }
-    .footer-bottom{
-        gap:0;
+
+    .footer-bottom {
+        gap: 0;
     }
-    .sns-list>li{
-        flex:1;
+
+    .sns-list>li {
+        flex: 1;
     }
 }
